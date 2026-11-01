@@ -224,7 +224,7 @@
     <language>en</language>
     <license>GPL-2.0-or-later</license>
   </extension>
-</addon><addon id="repository.jake.community" name="Jake Community Add-ons" version="1.0.7" provider-name="Jake">
+</addon><addon id="repository.jake.community" name="Jake Community Add-ons" version="1.0.8" provider-name="Jake">
   <requires>
     <import addon="xbmc.addon" version="12.0.0" />
   </requires>
@@ -240,7 +240,7 @@
     <description lang="en_GB">JVBuilt's Garage and the curated community add-ons used by JVBuilt. Public HTTPS updates are available at home and away without the home server PC.</description>
     <platform>all</platform>
     <license>MIT</license>
-  <news>1.0.7: Permanent public HTTPS repository, Garage 2.0.9.10 and JVBuilt 6.4.4 downloads.</news></extension>
+  <news>1.0.8: Repository installer repacked with an explicit root directory, standard file permissions and stored ZIP entries for cross-platform installation. Public Garage/build updates retained.</news></extension>
 </addon><addon id="script.module.archive_tool" name="archive_tool" provider-name="Zach Morris" version="2.0.3">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
