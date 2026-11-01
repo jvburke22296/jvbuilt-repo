@@ -1,6 +1,6 @@
 name="JVBuilt 6"
-version="6.4.7"
-url="https://github.com/jvburke22296/jvbuilt-repo/releases/download/build-6.4.7/JVBuilt6.4.7.zip"
+version="6.4.8"
+url="https://github.com/jvburke22296/jvbuilt-repo/releases/download/build-6.4.8/JVBuilt6.4.8.zip"
 minor="http://"
 gui="http://"
 kodi="21.3"
@@ -10,7 +10,7 @@ fanart="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/pl
 preview=" "
 adult="no"
 info="http://"
-description="JVBuilt 6.4.7: Full reset and automatic setup corrected after a real Windows installation test. Home widget fixes retained. Update Garage to 2.0.9.16 first. Existing Kodi data is erased only after download and validation."
+description="JVBuilt 6.4.8: New 1994 AV-club intro with mysterious fade-in, spinning screen exit and automatic Home handoff. Includes Garage 2.0.9.16 and existing installation fixes."
 
 id="plugin.program.jvbuiltwizard"
 version="2.0.9.16"
