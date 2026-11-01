@@ -10,8 +10,8 @@ fanart="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/pl
 preview=" "
 adult="no"
 info="http://"
-description="JVBuilt 6.4.7: Full reset and automatic setup corrected after a real Windows installation test. Home widget fixes retained. Update Garage to 2.0.9.13 first. Existing Kodi data is erased only after download and validation."
+description="JVBuilt 6.4.7: Full reset and automatic setup corrected after a real Windows installation test. Home widget fixes retained. Update Garage to 2.0.9.14 first. Existing Kodi data is erased only after download and validation."
 
 id="plugin.program.jvbuiltwizard"
-version="2.0.9.13"
-zip="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/plugin.program.jvbuiltwizard/plugin.program.jvbuiltwizard-2.0.9.13.zip"
+version="2.0.9.14"
+zip="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/plugin.program.jvbuiltwizard/plugin.program.jvbuiltwizard-2.0.9.14.zip"

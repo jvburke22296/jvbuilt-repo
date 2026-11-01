@@ -37,7 +37,7 @@
       <screenshot>assets/screenshot/screen6.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.13" provider-name="Jake">
+</addon><addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.14" provider-name="Jake">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -58,7 +58,7 @@
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <source>https://www.github.com/a4k-openproject/plugin.program.jvbuiltwizard/</source>
-        <news>2.0.9.13: Real-device setup fixes: accept fresh official catalog without timestamp, match native install prompts through Kodi info labels, and check mixed-case add-on IDs through JSON-RPC.</news>
+        <news>2.0.9.14: Repacked installer with explicit directories. Repository SHA-256 sidecars corrected to LF-only for Kodi 21.3 checksum parsing. Runtime and full-reset behavior unchanged.</news>
         <assets>
             <icon>garage-menu-v2.png</icon>
             <fanart>fanart.jpg</fanart>
