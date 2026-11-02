@@ -1,4 +1,4 @@
-# JVBuilt's Garage
+# JVBuilt Kodi Repository
 
 Public Kodi update distribution. This repository contains the published catalog, add-on packages, and artwork. Full build ZIPs are distributed through Releases.
 
