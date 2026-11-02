@@ -1,0 +1,53 @@
+{
+  "version": "6.4.11",
+  "profiles": [
+    {
+      "id": "PC",
+      "name": "JVBuilt 6 - PC OptiPlex 3050",
+      "memory": 256,
+      "read": 0,
+      "widgets": 25,
+      "image": 720,
+      "fanart": 1080,
+      "reflections": true,
+      "timeshift": 15,
+      "description": "OptiPlex 3050, i5-7500, Intel HD 630, 8 GB RAM",
+      "filename": "JVBuilt6.4.11-PC.zip",
+      "version": "6.4.11",
+      "sha256": "a2b030cdb9ff606e2a6644bc8e2a75676446dcf86fca53e8efa3aa2bb5264198",
+      "bytes": 247492732
+    },
+    {
+      "id": "FireStick4K",
+      "name": "JVBuilt 6 - Fire TV Stick 4K 2nd Gen",
+      "memory": 128,
+      "read": 400,
+      "widgets": 12,
+      "image": 540,
+      "fanart": 1080,
+      "reflections": false,
+      "timeshift": 10,
+      "description": "Fire TV Stick 4K second generation; lighter widgets and artwork",
+      "filename": "JVBuilt6.4.11-FireStick4K.zip",
+      "version": "6.4.11",
+      "sha256": "3f420abedd494964375d74c4c9f317be5a4c980be85acafacdee047c0722ce14",
+      "bytes": 247492708
+    },
+    {
+      "id": "SonTV",
+      "name": "JVBuilt 6 - Son TV",
+      "memory": 64,
+      "read": 200,
+      "widgets": 8,
+      "image": 360,
+      "fanart": 720,
+      "reflections": false,
+      "timeshift": 5,
+      "description": "Son TV Fire TV device; conservative memory and artwork settings",
+      "filename": "JVBuilt6.4.11-SonTV.zip",
+      "version": "6.4.11",
+      "sha256": "b542f579bc5ae6b4eeb586dcd82efafecd48a9caca3cae7b3f3280162e8864ab",
+      "bytes": 247492678
+    }
+  ]
+}

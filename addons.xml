@@ -1,472 +1,453 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons>
-  <addon id="plugin.program.iagl" name="Internet Archive Game Launcher" version="4.0.6">
+<addons><addon id="plugin.program.iagl" name="Internet Archive Game Launcher" version="4.0.6">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.infotagger" />
+    <import addon="script.module.requests" />
+    <import addon="vfs.libarchive" />
+    <import addon="script.module.archive_tool" version="2.0.3" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    
+    <platform>all</platform>
+    <summary lang="en_GB">Internet Archive Game Launcher</summary>
+    <description lang="en_GB">The Internet Archive Game Launcher (IAGL) is a FREE Kodi addon that will browse and launch games available from the Internet</description>
+    <summary lang="es_ES">Internet Archive Game Launcher</summary>
+    <description lang="es_ES">Internet Archive Game Launcher (IAGL) es un complemento gratuito para Kodi que explora y lanza juegos disponibles en Internet</description>
+    <summary lang="es_MX">Internet Archive Game Launcher</summary>
+    <description lang="es_MX">Internet Archive Game Launcher (IAGL) es un complemento gratuito para Kodi que explorará y lanzará juegos disponibles en Internet</description>
+    <summary lang="pt_BR">Internet Archive Game Launcher</summary>
+    <description lang="pt_BR">Internet Archive Game Launcher (IAGL) é um addon gratuito para Kodi que explora e executa jogos disponíveis na Internet</description>
+    <summary lang="pt_PT">Internet Archive Game Launcher</summary>
+    <description lang="pt_PT">Internet Archive Game Launcher (IAGL) é um addon gratuito para Kodi que explora e executa jogos disponíveis na Internet</description>
+    <license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=231339</forum>
+    <source>https://github.com/zach-morris/plugin.program.iagl</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+      <screenshot>assets/screenshot/screen1.jpg</screenshot>
+      <screenshot>assets/screenshot/screen2.jpg</screenshot>
+      <screenshot>assets/screenshot/screen3.jpg</screenshot>
+      <screenshot>assets/screenshot/screen4.jpg</screenshot>
+      <screenshot>assets/screenshot/screen5.jpg</screenshot>
+      <screenshot>assets/screenshot/screen6.jpg</screenshot>
+    </assets>
+  </extension>
+</addon><addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.17" provider-name="Jake">
     <requires>
-      <import addon="xbmc.python" version="3.0.1" />
-      <import addon="script.module.infotagger" />
-      <import addon="script.module.requests" />
-      <import addon="vfs.libarchive" />
-      <import addon="script.module.archive_tool" version="2.0.3" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+        <import addon="script.speedtester" optional="true" version="1.1.3" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-      <provides>video game</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en_GB">Internet Archive Game Launcher</summary>
-      <description lang="en_GB">The Internet Archive Game Launcher (IAGL) is a FREE Kodi addon that will browse and launch games available from the Internet</description>
-      <summary lang="es_ES">Internet Archive Game Launcher</summary>
-      <description lang="es_ES">Internet Archive Game Launcher (IAGL) es un complemento gratuito para Kodi que explora y lanza juegos disponibles en Internet</description>
-      <summary lang="es_MX">Internet Archive Game Launcher</summary>
-      <description lang="es_MX">Internet Archive Game Launcher (IAGL) es un complemento gratuito para Kodi que explorará y lanzará juegos disponibles en Internet</description>
-      <summary lang="pt_BR">Internet Archive Game Launcher</summary>
-      <description lang="pt_BR">Internet Archive Game Launcher (IAGL) é um addon gratuito para Kodi que explora e executa jogos disponíveis na Internet</description>
-      <summary lang="pt_PT">Internet Archive Game Launcher</summary>
-      <description lang="pt_PT">Internet Archive Game Launcher (IAGL) é um addon gratuito para Kodi que explora e executa jogos disponíveis na Internet</description>
-      <license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-      <forum>https://forum.kodi.tv/showthread.php?tid=231339</forum>
-      <source>https://github.com/zach-morris/plugin.program.iagl</source>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.png</fanart>
-        <screenshot>assets/screenshot/screen1.jpg</screenshot>
-        <screenshot>assets/screenshot/screen2.jpg</screenshot>
-        <screenshot>assets/screenshot/screen3.jpg</screenshot>
-        <screenshot>assets/screenshot/screen4.jpg</screenshot>
-        <screenshot>assets/screenshot/screen5.jpg</screenshot>
-        <screenshot>assets/screenshot/screen6.jpg</screenshot>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.16" provider-name="Jake">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
-      <import addon="script.module.six" />
-      <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
-      <import addon="script.speedtester" optional="true" version="1.1.3" />
-    </requires>
+    
     <extension point="xbmc.python.pluginsource" library="default.py">
-      <provides>executable</provides>
+        <provides>executable</provides>
     </extension>
+    
     <extension point="xbmc.service" library="startup.py" start="startup" />
+    
     <extension point="xbmc.addon.metadata">
-      <summary lang="en">JVBuilt build maintenance and installer for Kodi 21</summary>
-      <description lang="en">[COLOR khaki]JVBuilt's Garage[/COLOR] offers many maintenance features, selective add-on data saving, and automated build installs. Perfect for keeping your Kodi running and distributing your own builds. You can also customize this add-on to make it your own.[CR]Many thanks to the developers drinfernoo and slamious for bringing us the Leia and Matrix versions of this add-on.</description>
-      <platform>all</platform>
-      <reuselanguageinvoker>false</reuselanguageinvoker>
-      <source>https://www.github.com/a4k-openproject/plugin.program.jvbuiltwizard/</source>
-      <news>2.0.9.16: Taller Garage mascot artwork approved by JVBuilt. Retains the Android installer staging-folder fix from 2.0.9.15.</news>
-      <assets>
-        <icon>garage-menu-v2.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
+        <summary lang="en">JVBuilt build maintenance and installer for Kodi 21</summary>
+        <description lang="en">[COLOR khaki]JVBuilt's Garage[/COLOR] offers many maintenance features, selective add-on data saving, and automated build installs. Perfect for keeping your Kodi running and distributing your own builds. You can also customize this add-on to make it your own.[CR]Many thanks to the developers drinfernoo and slamious for bringing us the Leia and Matrix versions of this add-on.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <source>https://www.github.com/a4k-openproject/plugin.program.jvbuiltwizard/</source>
+        <news>2.0.9.17: Enable available English subtitles at movie and episode startup. Preserve this device's personal configuration during build updates, including Android emulated-storage support and retained recovery data.</news>
+        <assets>
+            <icon>garage-menu-v2.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
-  </addon>
-  <addon id="plugin.program.pvr.setup" name="PVR/EPG Quick Setup" version="1.4.8" provider-name="Diggz">
+</addon><addon id="plugin.program.pvr.setup" name="PVR/EPG Quick Setup" version="1.4.9" provider-name="Diggz">
     <requires>
-      <import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.python" version="3.0.0" />
     </requires>
     <extension point="xbmc.python.script" library="addon.py" />
     <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">One-click setup for Kodi PVR IPTV Simple</summary>
-      <platform>all</platform>
-      <assets>
-        <icon>icon.png</icon>
-      </assets>
+        <summary lang="en_GB">One-click setup for Kodi PVR IPTV Simple</summary>
+        <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     </extension>
-  </addon>
-  <addon id="plugin.video.jetproxy" version="1.1.2" name="JetProxy" provider-name="t4ils">
+</addon><addon id="plugin.video.jetproxy" version="1.1.2" name="JetProxy" provider-name="t4ils">
+<requires>
+  <import addon="xbmc.python" version="3.0.0" />
+  <import addon="script.module.routing" />
+  <import addon="script.module.requests" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.service" library="service.py" />
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Local HLS proxy for IPTV streams</summary>
+  <description lang="en_GB">JetProxy proxies HLS manifests and segments locally with controlled headers, playlist normalization, and a stall watchdog so dead live streams fail fast instead of freezing playback.</description>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>  
+  </assets>
+</extension>
+</addon><addon id="plugin.video.lookmovietomb" name="LookMovie" version="0.9" provider-name="mbebe">
     <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.routing" />
-      <import addon="script.module.requests" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.inputstreamhelper" version="0.3.3" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
-      <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en">Local HLS proxy for IPTV streams</summary>
-      <description lang="en_GB">JetProxy proxies HLS manifests and segments locally with controlled headers, playlist normalization, and a stall watchdog so dead live streams fail fast instead of freezing playback.</description>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="plugin.video.lookmovietomb" name="LookMovie" version="0.9" provider-name="mbebe">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.inputstreamhelper" version="0.3.3" />
-      <import addon="script.module.requests" />
-      <import addon="script.module.six" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-      <provides>video</provides>
+        <provides>video</provides>
     </extension>
     <extension point="xbmc.service" library="serverHTTP.py" />
     <extension point="xbmc.addon.metadata">
-      <description lang="en">https://www.lookmovie2.to</description>
-      <disclaimer lang="en">https://github.com/mbebe/blomqvist</disclaimer>
-      <summary lang="en">https://www.lookmovie2.to</summary>
-      <language>en</language>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-      <website>https://github.com/mbebe/blomqvist</website>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
+        <description lang="en">https://www.lookmovie2.to</description>
+        <disclaimer lang="en">https://github.com/mbebe/blomqvist</disclaimer>    
+        <summary lang="en">https://www.lookmovie2.to</summary>
+        <language>en</language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>https://github.com/mbebe/blomqvist</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
-  </addon>
-  <addon id="plugin.video.themoviedb.helper" version="6.20.2" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.madtitansports" name="Mad Titan [COLORyellow]Sports[/COLOR] V2.0" version="2.0.47.1" provider-name="Titans Team">
+  <requires>
+<import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+    <import addon="script.module.unidecode" />
+    <import addon="script.module.inputstreamhelper" />
+    <import addon="script.module.resolveurl" />
+    <import addon="script.module.microjenscrapers" />
+    <import addon="script.module.tzlocal" />
+    <import addon="script.module.jetextractors" version="3.3.30.2" />
+    <import addon="script.module.pytz" />
+    <import addon="plugin.video.jetproxy" optional="true" />
+    <import addon="inputstream.ffmpegdirect" />
+    
+    <import addon="inputstream.adaptive" />
+    <import addon="script.module.pyamf" />
+    
+    <import addon="script.module.tabulate" />
+    <import addon="script.module.beautifulsoup4" optional="true" />
+  <import addon="service.jvbuilt.live_delay" version="1.0.0" /></requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.python.script" library="gui_launcher.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Sports,Live tv,Movies,TV Shows. Thanks to The Jen Team for all the hard work.</summary>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+  </assets>
+  </extension>
+</addon><addon id="plugin.video.themoviedb.helper" version="6.20.2" name="TMDb Helper" provider-name="jurialmunkey">
+<requires>
+  <import addon="xbmc.python" version="3.0.1" />
+  <import addon="script.module.requests" version="2.9.1" />
+  <import addon="script.module.pil" version="1.1.7" />
+  <import addon="script.module.addon.signals" version="0.0.6" />
+  <import addon="script.module.jurialmunkey" version="0.2.35" />
+  <import addon="script.module.infotagger" version="0.1.0" />
+  <import addon="script.module.qrcode" version="6.1.0" />
+</requires>
+<extension point="xbmc.python.pluginsource" library="resources/plugin.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.python.script" library="resources/script.py" />
+<extension point="xbmc.service" library="resources/service.py" />
+<extension point="xbmc.python.module" library="resources/modules" />
+<extension point="xbmc.addon.metadata">
+  <reuselanguageinvoker>false</reuselanguageinvoker>
+  <summary lang="de_DE">TMDb Helfer</summary>
+  <summary lang="en_GB">TMDb Helper</summary>
+  <summary lang="es_ES">Asistente TMDb</summary>
+  <summary lang="zh_CN">TMDb 助手</summary>
+  <description lang="de_DE">TMDb Helper liefert Details über Filme, Fernsehsendungen und Schauspieler aus TMDb. Benutzer können auf eine Vielzahl von Listen aus TMDb TVDb MDbList und Trakt zugreifen.</description>
+  <description lang="en_GB">TMDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
+  <description lang="es_ES">TMDb Helper proporciona detalles sobre películas, series y actores de TMDb. Los usuarios pueden acceder a una variedad de listas de TMDb, TVDb, MDbList y Trakt.</description>
+  <description lang="pl_PL">TMDb Helper dostarcza szczegółowych informacji o filmach, serialach i aktorach z serwisu TMDb. Użytkownicy mają dostęp do szeregu list z serwisów TMDb, TVDb, MDbList i Trakt.</description>
+  <description lang="sv_SE">TMDb Helper tillhandahåller information om filmer, tv-serier och skådespelare från TMDb. Användare kan få tillgång till en mängd olika listor från TMDb, TVDb, MDbList och Trakt.</description>
+  <description lang="zh_CN">TMDb 助手从 TMDb（影视数据库） 获取电影、电视剧及演员的详细信息。用户可访问来自 TMDb、TVDb、MDbList 和 Trakt 的各类影视列表。</description>
+  <disclaimer lang="de_DE">Daten bereitgestellt von TMDb TVDb MDbList OMDb FanartTV und Trakt. Einige der Informationen werden von TheTVDB.com bereitgestellt. Bitte erwäge sie zu unterstützen. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="en_GB">Data provided by TMDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="es_ES">Datos proporcionados por TMDb, TVDb, MDbList, OMDb, FanartTV y Trakt. Parte de la información es suministrada por TheTVDB.com. Por favor, considera apoyarles. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="pl_PL">Dane dostarczane przez TMDb TVDb MDbList OMDb FanartTV i Trakt. Niektóre informacje pochodzą z serwisu TheTVDB.com. Prosimy o rozważenie wsparcia tych serwisów. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="sv_SE">Data tillhandahållen av TMDb TVDb MDbList OMDb FanartTV och Trakt. En del av informationen tillhandahålls av TheTVDB.com. Stöd dem gärna. https://thetvdb.com/subscribe</disclaimer>
+  <disclaimer lang="zh_CN">数据由 TMDb、TVDb、MDbList、OMDb、FanartTV 和 Trakt 提供。部分信息由 TheTVDB.com 提供，建议您支持他们。订阅链接：https://thetvdb.com/subscribe</disclaimer>
+  <license>GPL-3.0-or-later</license>
+  <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
+  <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <clearlogo>clearlogo.png</clearlogo>
+    <screenshot>resources/screenshot-01.jpg</screenshot>
+    <screenshot>resources/screenshot-02.jpg</screenshot>
+  </assets>
+</extension>
+</addon><addon id="plugin.video.tvfree" name="TV Free" version="0.0.6" provider-name="X">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.routing" />
+    <import addon="script.module.resolveurl" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.tzlocal" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <summary lang="en_GB">Non Debrid</summary>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+  </extension>
+</addon><addon id="repository.jake.community" name="Jake Community Add-ons" version="1.0.8" provider-name="Jake">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0" />
+  </requires>
+  <extension point="xbmc.addon.repository" name="Jake Community Add-ons">
+    <dir>
+      <info>https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/addons.xml</info>
+      <checksum verify="sha256">https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/addons.xml.sha256</checksum><datadir>https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/</datadir>
+      <hashes>sha256</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Jake's community repository, including JVBuilt's Garage</summary>
+    <description lang="en_GB">JVBuilt's Garage and the curated community add-ons used by JVBuilt. Public HTTPS updates are available at home and away without the home server PC.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+  <news>1.0.8: Repository installer repacked with an explicit root directory, standard file permissions and stored ZIP entries for cross-platform installation. Public Garage/build updates retained.</news></extension>
+</addon><addon id="script.module.archive_tool" name="archive_tool" provider-name="Zach Morris" version="2.0.3">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="vfs.libarchive" />
+    <import addon="vfs.rar" optional="true" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Python class for working with file archives</summary>
+    <description lang="en">archive_tool is a set of common tools to work with the Kodi libarchive virtual file system</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <license>GNU GENERAL PUBLIC LICENSE V3</license>
+  </extension>
+</addon><addon id="script.module.cloudrequest" name="CloudRequest" version="1.0.2" provider-name="oneplay team">
+
     <requires>
-      <import addon="xbmc.python" version="3.0.1" />
-      <import addon="script.module.requests" version="2.9.1" />
-      <import addon="script.module.pil" version="1.1.7" />
-      <import addon="script.module.addon.signals" version="0.0.6" />
-      <import addon="script.module.jurialmunkey" version="0.2.35" />
-      <import addon="script.module.infotagger" version="0.1.0" />
-      <import addon="script.module.qrcode" version="6.1.0" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/plugin.py">
-      <provides>video</provides>
-    </extension>
-    <extension point="xbmc.python.script" library="resources/script.py" />
-    <extension point="xbmc.service" library="resources/service.py" />
-    <extension point="xbmc.python.module" library="resources/modules" />
-    <extension point="xbmc.addon.metadata">
-      <reuselanguageinvoker>false</reuselanguageinvoker>
-      <summary lang="de_DE">TMDb Helfer</summary>
-      <summary lang="en_GB">TMDb Helper</summary>
-      <summary lang="es_ES">Asistente TMDb</summary>
-      <summary lang="zh_CN">TMDb 助手</summary>
-      <description lang="de_DE">TMDb Helper liefert Details über Filme, Fernsehsendungen und Schauspieler aus TMDb. Benutzer können auf eine Vielzahl von Listen aus TMDb TVDb MDbList und Trakt zugreifen.</description>
-      <description lang="en_GB">TMDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
-      <description lang="es_ES">TMDb Helper proporciona detalles sobre películas, series y actores de TMDb. Los usuarios pueden acceder a una variedad de listas de TMDb, TVDb, MDbList y Trakt.</description>
-      <description lang="pl_PL">TMDb Helper dostarcza szczegółowych informacji o filmach, serialach i aktorach z serwisu TMDb. Użytkownicy mają dostęp do szeregu list z serwisów TMDb, TVDb, MDbList i Trakt.</description>
-      <description lang="sv_SE">TMDb Helper tillhandahåller information om filmer, tv-serier och skådespelare från TMDb. Användare kan få tillgång till en mängd olika listor från TMDb, TVDb, MDbList och Trakt.</description>
-      <description lang="zh_CN">TMDb 助手从 TMDb（影视数据库） 获取电影、电视剧及演员的详细信息。用户可访问来自 TMDb、TVDb、MDbList 和 Trakt 的各类影视列表。</description>
-      <disclaimer lang="de_DE">Daten bereitgestellt von TMDb TVDb MDbList OMDb FanartTV und Trakt. Einige der Informationen werden von TheTVDB.com bereitgestellt. Bitte erwäge sie zu unterstützen. https://thetvdb.com/subscribe</disclaimer>
-      <disclaimer lang="en_GB">Data provided by TMDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
-      <disclaimer lang="es_ES">Datos proporcionados por TMDb, TVDb, MDbList, OMDb, FanartTV y Trakt. Parte de la información es suministrada por TheTVDB.com. Por favor, considera apoyarles. https://thetvdb.com/subscribe</disclaimer>
-      <disclaimer lang="pl_PL">Dane dostarczane przez TMDb TVDb MDbList OMDb FanartTV i Trakt. Niektóre informacje pochodzą z serwisu TheTVDB.com. Prosimy o rozważenie wsparcia tych serwisów. https://thetvdb.com/subscribe</disclaimer>
-      <disclaimer lang="sv_SE">Data tillhandahållen av TMDb TVDb MDbList OMDb FanartTV och Trakt. En del av informationen tillhandahålls av TheTVDB.com. Stöd dem gärna. https://thetvdb.com/subscribe</disclaimer>
-      <disclaimer lang="zh_CN">数据由 TMDb、TVDb、MDbList、OMDb、FanartTV 和 Trakt 提供。部分信息由 TheTVDB.com 提供，建议您支持他们。订阅链接：https://thetvdb.com/subscribe</disclaimer>
-      <license>GPL-3.0-or-later</license>
-      <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
-      <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-        <clearlogo>clearlogo.png</clearlogo>
-        <screenshot>resources/screenshot-01.jpg</screenshot>
-        <screenshot>resources/screenshot-02.jpg</screenshot>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="plugin.video.tvfree" name="TV Free" version="0.0.6" provider-name="X">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
-      <import addon="script.module.beautifulsoup4" />
-      <import addon="script.module.routing" />
-      <import addon="script.module.resolveurl" />
-      <import addon="script.module.pytz" />
-      <import addon="script.module.tzlocal" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-      <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
-      <summary lang="en_GB">Non Debrid</summary>
-      <platform>all</platform>
-      <language>en</language>
-      <license>GPL-2.0-or-later</license>
-    </extension>
-  </addon>
-  <addon id="repository.jake.community" name="Jake Community Add-ons" version="1.0.8" provider-name="Jake">
-    <requires>
-      <import addon="xbmc.addon" version="12.0.0" />
-    </requires>
-    <extension point="xbmc.addon.repository" name="Jake Community Add-ons">
-      <dir>
-        <info>https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/addons.xml</info>
-        <checksum verify="sha256">https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/addons.xml.sha256</checksum>
-        <datadir>https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/</datadir>
-        <hashes>sha256</hashes>
-      </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Jake's community repository, including JVBuilt's Garage</summary>
-      <description lang="en_GB">JVBuilt's Garage and the curated community add-ons used by JVBuilt. Public HTTPS updates are available at home and away without the home server PC.</description>
-      <platform>all</platform>
-      <license>MIT</license>
-      <news>1.0.8: Repository installer repacked with an explicit root directory, standard file permissions and stored ZIP entries for cross-platform installation. Public Garage/build updates retained.</news>
-    </extension>
-  </addon>
-  <addon id="script.module.archive_tool" name="archive_tool" provider-name="Zach Morris" version="2.0.3">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="vfs.libarchive" />
-      <import addon="vfs.rar" optional="true" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en">Python class for working with file archives</summary>
-      <description lang="en">archive_tool is a set of common tools to work with the Kodi libarchive virtual file system</description>
-      <platform>all</platform>
-      <assets>
-        <icon>icon.png</icon>
-      </assets>
-      <license>GNU GENERAL PUBLIC LICENSE V3</license>
-    </extension>
-  </addon>
-  <addon id="script.module.cloudrequest" name="CloudRequest" version="1.0.2" provider-name="oneplay team">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
-    </requires>
+
     <extension point="xbmc.python.module" library="." />
+
     <extension point="xbmc.addon.metadata">
-      <summary lang="en">HTTP library with Cloudflare bypass</summary>
-      <description lang="en">Provides a CloudScraper session with automatic bypass for Cloudflare IUAM challenges.</description>
-      <platform>all</platform>
-      <assets>
-        <icon>icon.png</icon>
-      </assets>
+        <summary lang="en">HTTP library with Cloudflare bypass</summary>
+        <description lang="en">Provides a CloudScraper session with automatic bypass for Cloudflare IUAM challenges.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
     </extension>
-  </addon>
-  <addon id="script.module.cocoscrapers" name="CocoScrapers Module" version="1.0.45" provider-name="CocoJoe">
+
+</addon><addon id="script.module.cocoscrapers" name="CocoScrapers Module" version="1.0.45" provider-name="CocoJoe">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="lib/default.py">
+		<provides>executable</provides>
+	</extension> 
+	<extension point="xbmc.service" library="lib/service.py" start="startup" />
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<summary lang="en">CocoScrapers Module</summary>
+		<description>A module that can be used to provide site scrapers.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum />
+		<website />
+		<source />
+		<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.png</fanart>
+			<screenshot />
+		</assets>
+		<news>Avoid strptime failures during episode air-date validation that can abort provider searches.</news>
+	</extension>
+</addon><addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.1.0">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</summary>
+    <description lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.infotagger</website>
+    <source>https://github.com/jurialmunkey/script.module.infotagger</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+
+</addon><addon id="script.module.jetextractors" name="JetExtractors" version="3.3.30.2" provider-name="THE TEAM">
+	<requires>
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.dateutil" />
+		<import addon="script.module.soupsieve" />
+		
+		<import addon="script.module.pyamf" />
+		<import addon="script.module.pycryptodome" optional="true" />
+		<import addon="script.module.pyjsparser" />
+		<import addon="script.module.go" optional="true" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Jet Extractors</summary>
+		<description lang="en">Jet Extractors</description>
+		<disclaimer lang="en" />
+		<license>MIT</license>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon><addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.2.35">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="script.module.infotagger" version="0.0.5" />
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
+    <description lang="zh_CN">TMDb 助手及其他相关 jurialmunkey 插件所需的通用代码</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="script.module.microjenscrapers" name="MicroJen Scraper Module" version="1.8" provider-name="MicroJen Community">
     <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.simplejson" />
     </requires>
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
-      <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.service" library="lib/service.py" start="startup" />
     <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-      <reuselanguageinvoker>false</reuselanguageinvoker>
-      <summary lang="en">CocoScrapers Module</summary>
-      <description>A module that can be used to provide site scrapers.</description>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-      <forum />
-      <website />
-      <source />
-      <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.png</fanart>
-        <screenshot />
-      </assets>
-      <news>Avoid strptime failures during episode air-date validation that can abort provider searches.</news>
-    </extension>
-  </addon>
-  <addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.1.0">
-    <requires>
-      <import addon="xbmc.python" version="3.0.1" />
-    </requires>
-    <extension point="xbmc.python.module" library="resources/modules" />
-    <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</summary>
-      <description lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</description>
-      <license>GPL-3.0-or-later</license>
-      <website>https://github.com/jurialmunkey/script.module.infotagger</website>
-      <source>https://github.com/jurialmunkey/script.module.infotagger</source>
-      <assets>
-        <icon>icon.png</icon>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.2.35">
-    <requires>
-      <import addon="xbmc.python" version="3.0.1" />
-      <import addon="script.module.requests" version="2.9.1" />
-      <import addon="script.module.infotagger" version="0.0.5" />
-    </requires>
-    <extension point="xbmc.python.module" library="resources/modules" />
-    <extension point="xbmc.addon.metadata">
-      <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
-      <description lang="zh_CN">TMDb 助手及其他相关 jurialmunkey 插件所需的通用代码</description>
-      <license>GPL-3.0-or-later</license>
-      <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
-      <assets>
-        <icon>icon.png</icon>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="script.module.microjenscrapers" name="MicroJen Scraper Module" version="1.8" provider-name="MicroJen Community">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.beautifulsoup4" />
-      <import addon="script.module.requests" />
-      <import addon="script.module.six" />
-      <import addon="script.module.kodi-six" />
-      <import addon="script.module.simplejson" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py">
-      <provides>executable</provides>
+        <provides>executable</provides>
     </extension>
-    <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en">MicroJen Scrapers Module</summary>
-      <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts. [CR]Massive thanks and respect to Crucial Minds for permission to use the Base Code and to The Jen Crew for their valuable contributions in bringing this project together.</description>
-      <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-      <platform>all</platform>
-      <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-      <assets>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="en">MicroJen Scrapers Module</summary>
+            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts. [CR]Massive thanks and respect to Crucial Minds for permission to use the Base Code and to The Jen Crew for their valuable contributions in bringing this project together.</description>
+                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>
-      </assets>
-      <news />
+    </assets>
+    <news />
     </extension>
-  </addon>
-  <addon id="script.module.pyjsparser" name="pyjsparser" version="3.0.0" provider-name="Addons4Kodi">
-    <requires>
+</addon><addon id="script.module.pyjsparser" name="pyjsparser" version="3.0.0" provider-name="Addons4Kodi">
+  <requires>
     
   </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-      <summary>Pure Python JavaScript Translator/Interpreter</summary>
-      <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
-      <platform>all</platform>
-      <language />
-      <license>MIT</license>
-      <forum />
-      <website>https://github.com/PiotrDabkowski/pyjsparser</website>
-      <source>https://github.com/PiotrDabkowski/pyjsparser</source>
-      <email />
-    </extension>
-  </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.212" provider-name="gujal">
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
+    <platform>all</platform>
+    <language />
+    <license>MIT</license>
+    <forum />
+    <website>https://github.com/PiotrDabkowski/pyjsparser</website>
+    <source>https://github.com/PiotrDabkowski/pyjsparser</source>
+    <email />
+  </extension>
+</addon><addon id="script.module.resolveurl" name="ResolveURL" version="5.1.212" provider-name="gujal">
     <requires>
-      <import addon="script.module.six" />
-      <import addon="script.module.kodi-six" />
-      <import addon="script.module.pyqrcode" />
-      <import addon="script.module.cloudrequest" optional="true" />
-      <import addon="plugin.video.youtube" optional="true" />
-      <import addon="script.module.python.twitch" optional="true" />
-      <import addon="plugin.googledrive" optional="true" />
+        
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.pyqrcode" />
+        <import addon="script.module.cloudrequest" optional="true" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.python.pluginsource" library="lib/default.py" />
     <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-      <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
-      <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
-      <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
-      <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-      <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
-      <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
-      <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
-      <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
-  </addon>
-  <addon id="script.module.tabulate" name="Tabulate" version="0.9.1.2">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Pretty-print tabular data</summary>
-      <description lang="en_GB">Pretty-print tabular data</description>
-      <license>MIT</license>
-      <platform>all</platform>
-      <website>https://github.com/astanin/python-tabulate</website>
-      <source>https://github.com/astanin/python-tabulate</source>
-      <assets>
-        <icon>resources/icon.png</icon>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="plugin.video.madtitansports" name="Mad Titan [COLORyellow]Sports[/COLOR] V2.0" version="2.0.47.1" provider-name="Titans Team">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
-      <import addon="script.module.routing" />
-      <import addon="script.module.unidecode" />
-      <import addon="script.module.inputstreamhelper" />
-      <import addon="script.module.resolveurl" />
-      <import addon="script.module.microjenscrapers" />
-      <import addon="script.module.tzlocal" />
-      <import addon="script.module.jetextractors" version="3.3.30.2" />
-      <import addon="script.module.pytz" />
-      <import addon="plugin.video.jetproxy" optional="true" />
-      <import addon="inputstream.ffmpegdirect" />
-      <import addon="inputstream.adaptive" />
-      <import addon="script.module.pyamf" />
-      <import addon="script.module.tabulate" />
-      <import addon="script.module.beautifulsoup4" optional="true" />
-      <import addon="service.jvbuilt.live_delay" version="1.0.0" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-      <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.python.script" library="gui_launcher.py">
-      <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Sports,Live tv,Movies,TV Shows. Thanks to The Jen Team for all the hard work.</summary>
-      <platform>all</platform>
-      <language>en</language>
-      <license>GPL-2.0-or-later</license>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="script.module.jetextractors" name="JetExtractors" version="3.3.30.2" provider-name="THE TEAM">
-    <requires>
-      <import addon="script.module.requests" />
-      <import addon="script.module.beautifulsoup4" />
-      <import addon="script.module.dateutil" />
-      <import addon="script.module.soupsieve" />
-      <import addon="script.module.pyamf" />
-      <import addon="script.module.pycryptodome" optional="true" />
-      <import addon="script.module.pyjsparser" />
-      <import addon="script.module.go" optional="true" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-      <platform>all</platform>
-      <summary lang="en">Jet Extractors</summary>
-      <description lang="en">Jet Extractors</description>
-      <disclaimer lang="en" />
-      <license>MIT</license>
-      <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-      </assets>
-    </extension>
-  </addon>
-  <addon id="service.jvbuilt.live_delay" name="JVBuilt Live Delay" version="1.0.0" provider-name="JVBuilt">
-    <requires>
-      <import addon="xbmc.python" version="3.0.0" />
-      <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en_GB">Start live TV about 45 seconds behind live</summary>
-      <description lang="en_GB">Buffers IPTV Simple timeshift playback and adjusts supported live HLS/DASH playback windows. Stops its startup adjustment when the user changes or stops playback.</description>
-      <platform>all</platform>
-      <license>MIT</license>
-    </extension>
-  </addon>
-</addons>
+</addon><addon id="script.module.tabulate" name="Tabulate" version="0.9.1.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Pretty-print tabular data</summary>
+    <description lang="en_GB">Pretty-print tabular data</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/astanin/python-tabulate</website>
+    <source>https://github.com/astanin/python-tabulate</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="service.jvbuilt.live_delay" name="JVBuilt Live Delay" version="1.0.0" provider-name="JVBuilt">
+  <requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" /></requires>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata"><summary lang="en_GB">Start live TV about 45 seconds behind live</summary><description lang="en_GB">Buffers IPTV Simple timeshift playback and adjusts supported live HLS/DASH playback windows. Stops its startup adjustment when the user changes or stops playback.</description><platform>all</platform><license>MIT</license></extension>
+</addon></addons>
