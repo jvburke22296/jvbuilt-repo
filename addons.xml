@@ -37,7 +37,7 @@
       <screenshot>assets/screenshot/screen6.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.17" provider-name="Jake">
+</addon><addon id="plugin.program.jvbuiltwizard" name="JVBuilt's Garage" version="2.0.9.18" provider-name="Jake">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -58,7 +58,7 @@
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <source>https://www.github.com/a4k-openproject/plugin.program.jvbuiltwizard/</source>
-        <news>2.0.9.17: Enable available English subtitles at movie and episode startup. Preserve this device's personal configuration during build updates, including Android emulated-storage support and retained recovery data.</news>
+        <news>2.0.9.18: One shared JVBuilt release for all devices. Previous PC, Fire TV and Son TV build names resolve to the common release. Retains device-preserving installation and English subtitle behavior.</news>
         <assets>
             <icon>garage-menu-v2.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -156,7 +156,7 @@
 		<fanart>fanart.jpg</fanart>
   </assets>
   </extension>
-</addon><addon id="plugin.video.themoviedb.helper" version="6.20.2" name="TMDb Helper" provider-name="jurialmunkey">
+</addon><addon id="plugin.video.themoviedb.helper" version="6.20.3" name="TMDb Helper" provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1" />
   <import addon="script.module.requests" version="2.9.1" />
