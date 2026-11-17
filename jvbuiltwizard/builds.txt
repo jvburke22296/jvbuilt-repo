@@ -10,8 +10,8 @@ fanart="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/pl
 preview=" "
 adult="no"
 info="http://"
-description="JVBuilt 6.4.14: personalized PVR lineup with 117 channel exclusions, Live Events filtering, MS NOW P4 and P9 backup; Video Games menu when missing, with NES and SNES/Sega download links. Accounts and device settings are preserved."
+description="JVBuilt 6.4.14: personalized PVR lineup with 117 channel exclusions, Live Events filtering, MS NOW P4 and P9 backup; Video Games menu when missing, with NES and SNES/Sega download links. Clean installation replaces existing configuration; the previous profile is kept separately for recovery."
 
 id="plugin.program.jvbuiltwizard"
-version="2.0.9.19"
-zip="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/plugin.program.jvbuiltwizard/plugin.program.jvbuiltwizard-2.0.9.19.zip"
+version="2.0.9.20"
+zip="https://raw.githubusercontent.com/jvburke22296/jvbuilt-repo/main/zips/plugin.program.jvbuiltwizard/plugin.program.jvbuiltwizard-2.0.9.20.zip"
